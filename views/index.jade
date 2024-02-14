@@ -1,5 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header
+    #titleText
+      h1 JavaScript Converter
+
+  .container
+    .content-text
+      p VB zu C#
+
+    .checkmarkdiv
+      svg.checkmark(width='100', height='100')
+        circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+        path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+
+    .cta-div
+      button.cta.firstConv Text aus Zwischenablage konvertieren
+  
+  footer
+    #placeholder
+    p#footerText 2024 - FS

@@ -1,8 +1,224 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#writeButtonDiv {
+  display: none;
 }
 
-a {
-  color: #00B7FF;
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Hind Siliguri', sans-serif;
+  color: #353535;
+  margin: 0;
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+h5 {
+  text-align: center;
+  color: #7ac142;
+}
+
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  background: #f7f7f7;
+}
+
+@keyframes shrink {
+  0% {
+      transform: scale(1.2)
+  }
+
+  100% {
+      transform: scale(1.1)
+  }
+}
+
+#titleText {
+  font-size: 18px;
+}
+
+#textspan {
+  margin-top: 5px;
+}
+
+#footerText {
+  margin: auto;
+}
+
+.content-text {
+  font-weight: 800;
+  font-size: 170px;
+}
+
+header {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+footer {
+  height: 120px;
+  display: flex;
+  font-weight: 800;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#placeholder {
+  height: 60px;
+}
+
+.container {
+  height: 60vh;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.success-text {
+  font-weight: 700;
+  font-size: 25px;
+  color: #7ac142;
+}
+
+.cta-div {  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta {
+  align-items: center;
+  background: #f5f5fa;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
+  box-sizing: border-box;
+  color: #2a1f62;
+  cursor: pointer;
+  display: flex;
+  font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+  font-size: 1rem;
+  justify-content: center;
+  line-height: 1.5rem;
+  padding: 15px;
+  position: relative;
+  text-align: left;
+  transition: .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+  width: max-content;
+  word-break: normal;
+  word-spacing: normal;
+}
+
+.cta:hover {
+  background: #f8f8ff;
+  box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
+}
+
+@media (min-width: 768px) {
+  .cta {
+      padding: 24px;
+  }
+}
+
+.checkmarkdiv {
+  height: 20vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: #f7f7f7;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+}
+
+.checkmark {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #7ac142;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}
+
+@keyframes stroke {
+  100% {
+      stroke-dashoffset: 0
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+      transform: none
+  }
+
+  50% {
+      transform: scale3d(1.1, 1.1, 1)
+  }
+}
+
+@keyframes fill {
+  100% {
+      box-shadow: inset 0px 0px 0px 30px #7ac142
+  }
+}
+
+#reloadButton {
+  background: #7ac142;
+  border: none;
+  color: white;
+  height: 40px;
+  font-size: 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+  #reloadButton:hover {
+      transform: scale(1.01);
+      background: yellowgreen;
+  }
