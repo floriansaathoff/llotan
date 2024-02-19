@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node ./bin/www.js",
+    "start-prod": "node ./bin/prod-www.js",
     "watch": "nodemon --ext *"
   },
   "dependencies": {
@@ -16,8 +17,8 @@
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "connect-livereload": "^0.6.1",
     "livereload": "^0.9.3",
+    "connect-livereload": "^0.6.1",
     "nodemon": "^3.0.3"
   }
 }
